@@ -1,0 +1,8 @@
+*.exe
+*.lst
+*.o
+*.eep
+*.lss
+*.map
+*.sym
+*.out

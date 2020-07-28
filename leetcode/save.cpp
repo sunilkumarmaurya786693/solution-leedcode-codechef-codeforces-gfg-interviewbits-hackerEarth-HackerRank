@@ -6,6 +6,12 @@ using namespace std;
 typedef long long int ll;
 ll m=1000000007;
 
+int solve(vector<int>&arr)
+{
+
+}
+
+
 int main()
 {
     SPEED;
@@ -13,6 +19,11 @@ int main()
     freopen("i.txt", "r", stdin);
     freopen("o.txt", "w", stdout);    
     #endif
-    cout<<"sunil";
+    int n;
+    cin>>n;
+    vector<int>arr;
+    for(int i=0;i<n;i++)
+    cin>>arr[i];
+    cout<<solve(arr);
     return 0;
 }
