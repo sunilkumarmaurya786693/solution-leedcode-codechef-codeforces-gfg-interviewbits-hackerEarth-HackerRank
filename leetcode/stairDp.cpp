@@ -5,9 +5,20 @@
 using namespace std;
 typedef long long int ll;
 ll m=1000000007;
-int solver(vector<int>&arr)
+int dp[40];
+int solve(int n)
 {
-
+    if(n==0)return 1;
+    if(n<0)return 0;
+    if(dp[n]!=-1)return dp[n];
+    int ans=solve(n-1)+solve(n-2);
+    dp[n]=ans;
+    return ans;
+}
+int solver(int n)
+{
+    memset(dp,-1,sizeof(dp));
+    return solve(n);
 }
 
 
@@ -20,9 +31,6 @@ int main()
     // memset(dp, -1, sizeof(dp));
     int n;
     cin>>n;
-    vector<int>arr(n);
-    for(int i=0;i<n;i++)
-    cin>>arr[i];
-    cout<<solver(arr);
+    cout<<solver(n);
     return 0;
 }
