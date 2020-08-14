@@ -4,18 +4,18 @@
 #define inf_neg -100000000000000ll
 using namespace std;
 typedef long long int ll;
-void solve(int n)
-{
-    
+ll m=1000000007;
+int solve(int n){
+
 }
 int main()
 {
     SPEED;
     #ifndef ONLINE_JUDGE
-    freopen("i.txt", "r", stdin);   
+    freopen("i.txt", "r", stdin);
     #endif
     int n;
     cin>>n;
-    solve(n);
+    cout<<solve(n);
     return 0;
 }
