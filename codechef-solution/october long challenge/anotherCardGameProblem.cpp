@@ -10,9 +10,24 @@ int main()
 {
     SPEED;
     #ifndef ONLINE_JUDGE
-    freopen("i.txt", "r", stdin);
-    // freopen("o.txt", "w", stdout);    
+    freopen("i.txt", "r", stdin);   
     #endif
-    cout<<"sunil";
+    int t;
+    cin>>t;
+    while(t--){
+    int c,r;
+    cin>>c>>r;
+    int C=c/9+(c%9?1:0);
+    int R=r/9+(r%9?1:0);
+    // cout<<C<<" "<<R<<"\n";
+    if(C<R)
+    cout<<0<<" "<<C<<"\n";
+    else
+    {
+    cout<<1<<" "<<R<<"\n";    
+    }
+    
+
+    }
     return 0;
 }

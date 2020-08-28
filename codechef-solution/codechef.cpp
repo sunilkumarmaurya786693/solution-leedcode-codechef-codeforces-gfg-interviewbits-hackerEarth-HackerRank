@@ -1,71 +1,67 @@
 #include <bits/stdc++.h>
 #define SPEED  ios::sync_with_stdio(false);cin.tie(0); cout.tie(0);
-#define pii pair<int,int>
+// #define pii pair<int,int>
+#define inf_neg -100000000000000ll
 using namespace std;
-typedef long long int intl;
-intl m=1000000007;
-    intl arr[34];
-    intl n;
-    intl save[100005][4];
+typedef long long int ll;
+ll m=1000000007;
+int ans=INT_MAX;
+int solve(int arr[],int n,int i,int k,vector<int>&family,int tablecount,map<pair<pair<int,int>,vector<int>>,int>&dp1)
+{
+    if(i>=n){
+    return 0;
+    }
+    // if(dp[i][tablecount]!=-1)return dp[i][tablecount];
+    pair<int,int> p={i,tablecount};
+    pair<pair<int,int>,vector<int>>p1={p,family};
+    if(dp1[p1])return dp1[p1];
 
-    intl solve(intl p,intl prev,string s)
-    {
-        cout<<s<<"\n";
-        // if(save[p][prev]!=-1)return save[p][prev]%m;
-        if(p>=n){
-            // cout<<s<<"\n";
-            return 1;}
-        // p is person number
-        // prev is prev person id
-        intl ans=0;
-        for(intl i=1;i<=3;i++)
-        {
-                intl x=prev*10+i;
-            // cout<<x<<"\n";
-                if(arr[x]>0 && prev!=i){
-                arr[x]--;
-                if(i==1)s.push_back('R');
-                if(i==2)s.push_back('O');
-                if(i==3)s.push_back('G');
-                
-                ans=(ans%m+solve(p+1,i,s)%m)%m;
-                s.pop_back();
-                arr[x]++;
-                }
-            
-        }
-        save[p][prev]=ans%m;
-        return ans%m;
+    if(family[arr[i]==0]){
+        family[arr[i]]++;
+        int p=0;
+        if(family[arr[i]]==2)p=2;
+        if(family[arr[i]]>2)p=1;
+        int ans2=solve(arr,n,i+1,k,family,tablecount,dp1)+p;
+        family[arr[i]]--;
+        //  dp[i][tablecount]=ans2;
+        dp1[p1]=ans2;
+        return ans2;
+    }
+    else{
+        family[arr[i]]++;
+        int p=0;
+        if(family[arr[i]]==2)p=2;
+        if(family[arr[i]]>2)p=1;
+        int ans2=solve(arr,n,i+1,k,family,tablecount,dp1)+p;
+        family[arr[i]]--;
+        vector<int>temp(101,0);
+        temp[arr[i]]++;
+        int ans1=solve(arr,n,i+1,k,temp,tablecount+1,dp1)+k;
+        dp1[p1]=min(ans1,ans2);
+        return min(ans1,ans2);
     }
 
+}
 int main()
 {
-    for(intl i=0;i<100005;i++)
+    SPEED;
+    #ifndef ONLINE_JUDGE
+    freopen("i.txt", "r", stdin);   
+    #endif
+    int t;
+    cin>>t;
+    while(t--)
     {
-        for(intl j=0;j<4;j++)
-        save[i][j]=-1;
+        ans=INT_MAX;
+        int n,k;
+        cin>>n>>k;
+        int arr[n];
+        for(int i=0;i<n;i++)cin>>arr[i];
+        vector<int>family(101,0);
+        // int family[101]={0};
+        // memset(dp,-1,sizeof(dp));
+        map<pair<pair<int,int>,vector<int>>,int>dp1;
+        cout<<solve(arr,n,0,k,family,1,dp1)+k<<"\n";
     }
-    for(intl i=0;i<34;i++)
-    arr[i]=INT_MAX;
-    cin>>n;
-    cin>>arr[12];
-    cin>>arr[13];
-    cin>>arr[21];
-    cin>>arr[23];
-    cin>>arr[31];
-    cin>>arr[32];
-    intl ans=0;
-    for(intl i=1;i<=3;i++)
-    {
-        string s="";
-        if(i==1)s.push_back('R');
-        if(i==2)s.push_back('O');
-        if(i==3)s.push_back('G');
-        intl p=1;
-       ans=(ans%m+solve(p,i,s)%m)%m;
-    //    cout<<"\n\n";
-    }
-    cout<<(ans%m)<<"\n";
-
     return 0;
 }
