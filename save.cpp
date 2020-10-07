@@ -5,14 +5,18 @@
 using namespace std;
 typedef long long int ll;
 ll m=1000000007;
-
+void solve(int n)
+{
+    
+}
 int main()
 {
     SPEED;
     #ifndef ONLINE_JUDGE
-    freopen("i.txt", "r", stdin);
-    // freopen("o.txt", "w", stdout);    
+    freopen("i.txt", "r", stdin);   
     #endif
-    cout<<"sunil";
+    int n;
+    cin>>n;
+    solve(n);
     return 0;
 }
