@@ -1,0 +1,52 @@
+Regroup 0's and 1's using Minimum Swaps
+Regroup 0's and 1's using Minimum Swaps
+Given a string S, count minimum no. of swaps needed to regroup 0's and 1's.
+
+After all swaps final string will look like all 0's followed by all 1's or all 1's followed by all 0's.
+
+Swap operation swaps two adjacent characters (01 -> 10, 10 -> 01, 00 -> 00 and 11 -> 11).
+
+Note:
+
+ Try to solve the problem using constant extra space. Expected time complexity is worst case O(length of S). 
+Examples:
+
+S: 000111 Answer: 0
+
+S: 1110101 Answer: 3 Explanation: 1110101 -> 1111001 -> 1111010 -> 1111100
+question link:https://www.scaler.com/academy/mentee-dashboard/classroom/strings-ii-7f1d5e7b-134a-4e61-8989-a0325f7455d5/#homework%2F525
+
+solution:
+int consider_starting_with(const char ch,const char* A,int n)
+{
+    int swaps = 0;
+    // int n = s.length();
+    int expected_place = 0;
+    int i;
+    for ( i = 0; i < n; ++i)
+    {
+        if (A[i] == ch)
+        {
+            swaps += (i - expected_place);
+            expected_place++;
+        }
+    }
+    return swaps;
+}
+int solve(const char* A) {
+    
+    int i=0;
+
+	while(A[i]=='0'||A[i]=='1')
+	{
+		// printf("%c",s[i]);
+		i++;
+	}
+    int n = i;
+    // printf("%d\n", n);
+    int one = consider_starting_with('1',A ,n);
+    int zero = consider_starting_with('0',A,n);
+    if(one<zero) return one;
+    else return zero; 
+    
+}
