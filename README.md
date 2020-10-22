@@ -44,7 +44,10 @@ Checkout my other projects [here](https://github.com/sunilkumarmaurya786693?tab=
 
 ### Contributors:
 
-* [sunilkumarmaurya786693](https://github.com/sunilkumarmaurya786693)
+* [Sunil Kumar Maurya](https://github.com/sunilkumarmaurya786693)
+* [Nikita Nagrale](https://github.com/nikitanagrale)
+* [Sayan](https://github.com/sayantann11)
+*[Udhay Brahmi](https://github.com/Udhay-Brahmi)
 
 
 recursion question link
