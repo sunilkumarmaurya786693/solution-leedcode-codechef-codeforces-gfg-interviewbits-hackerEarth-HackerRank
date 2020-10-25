@@ -3,7 +3,7 @@
 *Problem Link : https://codeforces.com/contest/456/problem/C
 *Platform: codeforces
 *Status: correct
-*Author: Mayukh Chakrabarti
+*Author: Mayukh Chakrabarti (https://github.com/MayukhC99)
 *
 */
 
