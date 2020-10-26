@@ -1,0 +1,77 @@
+/* Question*/
+PRETTYPRINT
+Print concentric rectangular pattern in a 2d matrix. Let us show you some examples to clarify what we mean.
+
+Example 1:
+
+Input: A = 4. Output:
+
+4 4 4 4 4 4 4 
+4 3 3 3 3 3 4 
+4 3 2 2 2 3 4 
+4 3 2 1 2 3 4 
+4 3 2 2 2 3 4 
+4 3 3 3 3 3 4 
+4 4 4 4 4 4 4 
+Example 2:
+
+Input: A = 3. Output:
+
+3 3 3 3 3 
+3 2 2 2 3 
+3 2 1 2 3 
+3 2 2 2 3 
+3 3 3 3 3 
+The outermost rectangle is formed by A, then the next outermost is formed by A-1 and so on.
+
+You will be given A as an argument to the function you need to implement, and you need to return a 2D array.
+
+//solution
+[13:49, 10/26/2020] Sayantan: vector<vector<int> > Solution::prettyPrint(int A) {
+    const int LEFT = 0, RIGHT = 1, DOWN = 2, UP = 3;
+    int N = 2 * A - 1;
+vector<vector<int>> result(N, vector<int>(N, 0));
+int x = 0, y = 0;
+int filler = A; 
+int direction = RIGHT;
+while(true) {
+result[x][y] = filler;
+if(filler == 1) {
+break;
+}
+if(direction==RIGHT) {
+y++;
+if(y == N || result[x][y] != 0) {
+y--;
+x++;
+direction = DOWN;
+}
+}
+else if(direction==LEFT) {
+y--;
+if(y < 0 || result[x][y] != 0) {
+y++;
+x--;
+direction = UP;
+}
+}
+else if(direction==DOWN) {
+x++;
+if(x == N || result[x][y] != 0) {
+x--;
+y--;
+direction = LEFT;
+}
+}
+else if(direction==UP) {
+x--;
+if(x < 0 || result[x][y] != 0) {
+x++;
+y++;
+direction = RIGHT;
+filler--;
+}
+}
+}
+return result;
+}
