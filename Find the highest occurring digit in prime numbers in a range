@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+//This question is done aready.........................
+int main() {
+	//code
+	int n,a,b;cin>>n;
+	int arr[1000001]={0};
+	for(int i=0;i<1000000;i++){
+	        int k=i;
+	        k+=i;
+	        while(k<=1000000){
+	            arr[k]=1;
+	            k+=i;
+	        }
+	}
+	while(n--){
+	    cin>>a>>b;
+	    string h="";
+	    for(int i=a;i<=b;i++){
+	        if(arr[i]==0){h+=to_string(i);}
+	    }
+	    map<int,int> m;
+	    for(int i=0;i<h.length();i++){
+	        m[(h[i]-'0')]++;
+	    }
+	    int ma=0,d=0;
+	    for(auto e: m){
+	        if(e.second>=ma){ma = e.second; d = e.first;}
+	    }
+	    cout<<d<<endl;
+	}
+	return 0;
+}
