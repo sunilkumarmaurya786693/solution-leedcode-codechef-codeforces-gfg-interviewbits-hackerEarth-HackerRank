@@ -1,0 +1,13 @@
+3
+Amit 
+BJP 
+c1 
+550
+Rahul 
+Congress 
+c1 
+450
+Sonia 
+Congress 
+c2 
+400.2 //400

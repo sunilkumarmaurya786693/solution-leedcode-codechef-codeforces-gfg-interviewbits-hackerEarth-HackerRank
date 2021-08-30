@@ -1,10 +1,4 @@
-// question link
-
-//contributor name: Sunil kumar maurya
-
-//Question Details
-
-
+//question link
 #include <bits/stdc++.h>
 #define SPEED  ios::sync_with_stdio(false);cin.tie(0); cout.tie(0);
 #define pii pair<int,int>

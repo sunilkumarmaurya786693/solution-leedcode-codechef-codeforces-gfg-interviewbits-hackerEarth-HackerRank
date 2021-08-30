@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 #define SPEED  ios::sync_with_stdio(false);cin.tie(0); cout.tie(0);
 #define pii pair<int,int>
-#define inf_neg -100000000000000ll
+#define inf_neg -100000000000000ll;
 using namespace std;
 typedef long long int ll;
 ll m=1000000007;
 int dp[2][20002];
-int solver(vector<vector<int>>&arr,int n,int m,int i,int j)
+int solver(vector<vector<int> >&arr,int n,int m,int i,int j)
 {
     if(i>=n || j>=m)return 0;
     if(dp[i][j]!=-1)return dp[i][j];
@@ -18,7 +18,7 @@ int solver(vector<vector<int>>&arr,int n,int m,int i,int j)
     dp[i][j]=ans;
     return ans;
 }
-int solve(vector<vector<int>>&arr)
+int solve(vector<vector<int> >&arr)
 {
    int m=arr[0].size();
    int n=2;
@@ -40,7 +40,7 @@ int main()
     // memset(dp, -1, sizeof(dp));
     int n;
     cin>>n;
-    vector<vector<int>>arr(2,vector<int>(n));
+    vector<vector<int> >arr(2,vector<int>(n));
     for(int i=0;i<2;i++)
     {
         for(int j=0;j<n;j++)
