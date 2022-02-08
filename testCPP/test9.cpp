@@ -1,24 +1,28 @@
 #include<bits/stdc++.h>
 using namespace std;
-map<string,int>m;
-void solve(int v[],int s,int e,string ss,int size){
-    if(size==3){
-        m[ss]++;
-        return ;
-    }
-    if(s>=e || size==3)return;
-    solve(v,s+1,e,ss+to_string(v[s]),size+1);
-    solve(v,s+1,e,ss,size);
-}
+
 int main() {
-    freopen("i.txt", "r", stdin); 
-    int n;cin>>n;
-    int v[n];
-    for(int i=0;i<n;i++)cin>>v[i];
-    string s="";
-    solve(v,0,n,s,0);
-    cout<<m.size()<<"\n";
-    for(auto i=m.begin();i!=m.end();i++){
-        cout<<i->first<<" "<<i->second<<"\n";
-    }  
+    freopen("i.txt", "r", stdin);  
+
+    int start=0,end;
+    cin>>end;
+    
+    int countZero=1;
+    for(int i=start;i<=end;i++){
+        int currentNumber=i;
+        while(currentNumber){
+            int digit=currentNumber%10;
+            currentNumber=currentNumber/10;
+            if(digit==0)
+            {
+                countZero++;
+            }
+        }
+    }
+    cout<<"total number of zero from 0 to "<<end<<" is "<<countZero;
+    
+    return 0;
+
 }
+
+// nlog(10)n
