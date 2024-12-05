@@ -2,8 +2,12 @@
 *
 !*.*
 !*/
-.vscode
 .DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+.vscode
+*.class
 testCPP/*
 Coding-ninjas-competitive
 Competitive-Coding
@@ -13,3 +17,11 @@ comptetive-programming_interview-resource
 coding template by other
 low level/Online_Examination_CPP
 low level/Online_Examination_CPP
+hackerRank-java/out/
+hackerRank-java/.cph/
+hackerRank-java/.idea
+leetcode/array/.cph/
+hello.dSYM/Contents/Info.plist
+hackerRank-java/hackerRank-jav  a.iml
+leetcode/array/save.bin
+.cph
