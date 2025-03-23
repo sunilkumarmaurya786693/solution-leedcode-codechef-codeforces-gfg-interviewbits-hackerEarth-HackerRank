@@ -38,8 +38,7 @@
 using namespace std;
 typedef long long int ll;
 ll m=1000000007;
-int solve(vector<vector<int>>&arr)
-{ 
+int solve(vector<vector<int>>&arr){ 
   int n=arr.size();
   int m=arr[0].size();
   int max_sum=INT_MIN;
@@ -51,8 +50,7 @@ int solve(vector<vector<int>>&arr)
   }
   return max_sum;
 }
-int main()
-{
+int main(){
     SPEED;
     #ifndef ONLINE_JUDGE
     freopen("i.txt", "r", stdin);   
