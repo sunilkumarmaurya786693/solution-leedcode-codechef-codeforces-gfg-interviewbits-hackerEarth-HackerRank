@@ -1,4 +1,4 @@
-import java.util.Calendar;
+import java.util.*;
 
 public class Java_6_Calendar {
     enum Days{
