@@ -37,6 +37,7 @@ vector<int> solve(vector<int>&arr, int target)
     int n=arr.size();
     int i=0,j=n-1;
     vector<int>ans(2,0);
+    // cout<<target;
     while(i<j)
     {
         int sum=arr[i]+arr[j];
@@ -52,10 +53,10 @@ vector<int> solve(vector<int>&arr, int target)
 }
 int main()
 {
-    SPEED;
-    #ifndef ONLINE_JUDGE
-    freopen("i.txt", "r", stdin);   
-    #endif
+    // SPEED;
+    // #ifndef ONLINE_JUDGE
+    // freopen("i.txt", "r", stdin);   
+    // #endif
     int n;
     cin>>n;
     vector<int>arr(n);
@@ -63,6 +64,7 @@ int main()
     int target;
     cin>>target;
     vector<int>ans=solve(arr,target);
+    
     cout<<ans[0]<<" "<<ans[1]<<"\n";
     return 0;
 }

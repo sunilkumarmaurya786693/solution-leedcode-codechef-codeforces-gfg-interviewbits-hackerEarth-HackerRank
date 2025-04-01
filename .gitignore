@@ -6,8 +6,11 @@
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
-.vscode
+**.dSYM
+**.bin
+# .vscode
 *.class
+.**
 testCPP/*
 Coding-ninjas-competitive
 Competitive-Coding
@@ -24,4 +27,4 @@ leetcode/array/.cph/
 hello.dSYM/Contents/Info.plist
 hackerRank-java/hackerRank-jav  a.iml
 leetcode/array/save.bin
-.cph
+**.out

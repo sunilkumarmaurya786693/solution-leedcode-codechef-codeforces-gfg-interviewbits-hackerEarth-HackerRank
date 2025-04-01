@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ - Debug Single File",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C++ - Debug Single File"
+        },
+        {
+            "name": "C++ - Debug Multi File",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C++ - Debug Multi File"
+        }
+    ]
+}

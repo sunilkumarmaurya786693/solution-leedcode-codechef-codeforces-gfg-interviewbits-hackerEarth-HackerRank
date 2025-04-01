@@ -1,6 +1,8 @@
-#include<bits/stdc++.h>
+#include "stdc++.h"
+#include <iostream>
 using namespace std;
 
 int main() {
-    freopen("i.txt", "r", stdin);   
+    cout<<"sunil 1 ";
+    // freopen("i.txt", "r", stdin);   
 }

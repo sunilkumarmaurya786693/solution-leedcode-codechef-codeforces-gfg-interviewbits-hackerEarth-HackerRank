@@ -11,8 +11,8 @@ class TreeNode {
         this->left = NULL;
         this->right = NULL;
     }
-};
-œ
+}
+
 void printBST(TreeNode* head){
     if(head ==NULL)return;
     cout<<head->val<<" ";

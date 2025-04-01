@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include "../stdc++.h"
 #define SPEED  ios::sync_with_stdio(false);cin.tie(0); cout.tie(0);
 #define pii pair<int,int>
 using namespace std;

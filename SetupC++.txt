@@ -2,3 +2,11 @@ Setup C++ on mac
 cd .vscode
 curl --remote-name-all https://raw.githubusercontent.com/CSE232-MSU/CSE232-VSCCONF/main/macos/\{launch.json,tasks.json,c_cpp_properties.json\}
 
+#include "../../stdc++.h"
+for bits/stdc++.h fix in mac
+https://gist.github.com/reza-ryte-club/97c39f35dab0c45a5d924dd9e50c445f
+
+
+cph fix in mac 
+for to its setting and add cpp path
+/opt/homebrew/bin/g++-14

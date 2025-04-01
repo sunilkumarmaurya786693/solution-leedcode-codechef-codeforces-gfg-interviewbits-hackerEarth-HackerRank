@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "vector": "cpp"
+    },
+    "cph.general.defaultLanguage": "cpp",
+    "cph.language.cpp.Command": "g++",
+    "C_Cpp.errorSquiggles": "disabled"
+}
